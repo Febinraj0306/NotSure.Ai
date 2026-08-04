@@ -7,6 +7,10 @@
     "dev:server": "npm run dev --prefix server",
     "dev:client": "npm run dev --prefix client",
     "dev:mobile": "npm start --prefix client-mobile",
+    "start:mobile:dev-client": "npm run start:dev-client --prefix client-mobile",
+    "build:mobile:dev": "npm run build:dev --prefix client-mobile",
+    "build:mobile:apk": "npm run build:apk --prefix client-mobile",
+    "build:mobile:production": "npm run build:production --prefix client-mobile",
     "install:all": "npm install --prefix server && npm install --prefix client && npm install --prefix client-mobile",
     "start:server": "npm start --prefix server",
     "build:client": "npm run build --prefix client"
