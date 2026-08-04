@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+client/dist/
+
+# Environment secrets — NEVER commit these
+server/.env
+.env
+.env.local
+.env.*.local
+client-mobile/.env
+client-mobile/.env.development
+client-mobile/.env.preview
+client-mobile/.env.production
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-tc-bg text-white font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-tc-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-tc-border rounded-full;
+  }
+}
+
+@layer components {
+  .verdict-card {
+    @apply rounded-2xl border p-6 transition-all duration-300 animate-slide-up;
+  }
+
+  .source-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium
+           border transition-all duration-150 hover:scale-105 active:scale-95;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold text-sm tracking-wide
+           bg-tc-accent text-white transition-all duration-200
+           hover:bg-blue-500 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-tc-accent focus:ring-offset-2 focus:ring-offset-tc-bg;
+  }
+
+  .textarea-main {
+    @apply w-full bg-tc-surface border border-tc-border rounded-xl p-4
+           text-white placeholder-gray-500 text-sm leading-relaxed resize-none
+           focus:outline-none focus:border-tc-accent focus:ring-1 focus:ring-tc-accent
+           transition-colors duration-200;
+  }
+
+  .loading-dot {
+    @apply w-2 h-2 rounded-full bg-tc-accent animate-bounce;
+  }
+}
+
+/* Verdict glow effects */
+.glow-true { box-shadow: 0 0 30px rgba(16, 185, 129, 0.15); }
+.glow-false { box-shadow: 0 0 30px rgba(239, 68, 68, 0.15); }
+.glow-misleading { box-shadow: 0 0 30px rgba(245, 158, 11, 0.15); }
+.glow-unverified { box-shadow: 0 0 30px rgba(107, 114, 128, 0.15); }
+
+/* Shimmer loading animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #1E2A3A 25%, #253347 50%, #1E2A3A 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
