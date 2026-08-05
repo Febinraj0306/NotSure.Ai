@@ -64,10 +64,11 @@ module.exports = {
         }
       ]
     ],
+    owner: "febinraj_0306",
     extra: {
       apiUrl: process.env.EXPO_PUBLIC_API_URL || "http://10.0.2.2:5001",
       eas: {
-        projectId: "your-eas-project-id"
+        projectId: "870a66cb-91bc-4445-a26c-b77bd67e39a3"
       }
     }
   }

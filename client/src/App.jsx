@@ -106,7 +106,7 @@ export default function App() {
       fetchRecentChecks();
     } catch (err) {
       if (err.name === 'AbortError') return;
-      setError('Could not reach the server. Make sure the backend is running on port 5001.');
+      setError('Could not reach the server. Please check your internet connection and try again.');
     } finally {
       setLoading(false);
     }
