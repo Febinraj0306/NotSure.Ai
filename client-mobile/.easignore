@@ -1,0 +1,9 @@
+# Exclude from EAS Build upload archive
+node_modules/
+.expo/
+*.log
+.env
+.env.*
+android/
+ios/
+web-build/
